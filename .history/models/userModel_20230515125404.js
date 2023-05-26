@@ -1,0 +1,23 @@
+const { getDb } = require("../util/database");
+
+class User{
+    constructor(userName, email, password){
+        this.name = userName;
+        this.email = email;
+        this.password = password;
+    }
+
+    save(){
+       const db = getDb();
+       db
+       .collection('products')
+       .insertOne({name: this.name, email: this.email})
+
+    }
+
+    static findById(id){
+      const db = getDb();
+     re  db
+       .collection('products')
+    }
+}
